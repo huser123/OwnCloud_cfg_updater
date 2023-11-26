@@ -1,5 +1,20 @@
 @echo off
 
+rem A felhasználó neve
+rem set USERNAME=%USERNAME%
+
+rem A mappák nevei
+set FOLDER1="LEADAS_a_tanarnak"
+set FOLDER2="FELADAT_a_tanartol"
+
+rem A mappák létrehozása
+mkdir "%USERPROFILE%\Desktop\%FOLDER1%"
+mkdir "%USERPROFILE%\Desktop\%FOLDER2%"
+
+rem Belép a könyvtárba és létrehozza a fájlt (ha létezik, üres sort írva bele, törli annak tartalmát)
+cd C:\Users\%USERNAME%\AppData\Roaming\ownCloud
+echo. > owncloud.cfg
+
 rem A fájl neve és helye
 set FILE=C:\Users\%USERNAME%\AppData\Roaming\ownCloud\owncloud.cfg
 
